@@ -103,11 +103,13 @@
 # Task 5 Tip Calculator Project
 
 print ("Welcome to the tip calculator! ")
-bill = float(input("What was the total bill? "))
-tip = int(input("How much Tip would you like to give? 10, 12, or 15? "))
+product_bill = float(input("What was the total bill? "))
+percentage_tip = int(input("What Percentage tip would you like to give? 10, 12, or 15? "))
 payers = int(input("How many people are to split the bill? "))
 
-total_bill = bill + tip
-individual_bill = round(total_bill/payers, 2)
+tip_value = product_bill * (percentage_tip / 100)
+gross_bill = product_bill + tip_value
+
+individual_bill =  round(gross_bill/payers, 2)
 
 print(f"Each Person will pay {individual_bill}")
