@@ -13,5 +13,3 @@ elif bmi < 25:
     print('normal weight')
 else:
     print("overweight")
-
-print(bmi)
