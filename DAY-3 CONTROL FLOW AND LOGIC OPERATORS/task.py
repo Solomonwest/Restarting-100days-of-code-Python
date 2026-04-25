@@ -117,8 +117,8 @@ elif size == 'M':
         print(f"Your Final Bill is {bill}")
 
 elif size == 'L':
-    bill = 20
-    print("The medium size pizza costs $20")
+    bill = 25
+    print("The Large size pizza costs $25")
     if pepperoni == 'Y':
         bill += 3
     if extra_cheese == 'Y':
