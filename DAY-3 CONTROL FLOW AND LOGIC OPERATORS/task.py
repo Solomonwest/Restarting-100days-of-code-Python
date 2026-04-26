@@ -129,3 +129,52 @@ elif size == 'L':
 
 else:
     print("Invalid Input, Kindly replace your order.")
+
+
+
+# Task 6 -------------- Logical Operators.
+#   and, or, not
+
+not 5 == 5
+
+a = 12
+
+b = 13
+
+if a > b and a % 2 == 0:
+    print("Working")
+else:
+    print('Fired')
+
+
+
+# Task 6 ----------------- Treasue Island Projects.
+
+print("Welcome to Treasure Island")
+print ("Your Mission is to find the treasure.")
+
+
+crossroad = input("You're at crossroad, Where do you want to go? Type 'Left' or 'Right' ")
+if crossroad == 'Right' or crossroad == 'right' or crossroad == 'RIGHT':
+    junction = input("You're at Junction, Where do you want to go? Type 'Left' or 'Right' ")
+
+    if junction == 'Left' or junction == 'left' or junction == 'LEFT':
+        river = input("You're at River, Where do you want to go? Type 'Swim' or 'Wait' ")
+
+        if river == 'Wait' or river == 'WAIT' or river == 'wait':
+            print("A Yatch Just arrived, hop in. ")
+            treasure = input(" You Arrived at the Island, choose the box with the Treasure, Type 'Red', 'Blue', or 'Green' ")
+
+            if treasure == 'blue' or treasure == 'BLUE' or treasure == 'Blue':
+                print("Congratulations Mate, you're Rich!!")               
+            else:
+                print("It's Empty, You're out of the game.")
+
+        else:
+            print("You got attacked by a shark, You're out of the game.")
+
+    else:
+        print("You got into an accident, You're out of the game.")
+
+else:
+    print("Wrong Turn, You're out of the game.")
