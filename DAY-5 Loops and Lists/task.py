@@ -29,3 +29,16 @@ for score in student_score:
         max_value = score
 
 print(max_value)
+
+
+# Task 3 - for loops with the Range function
+
+# This prints all numbers from 1 to 9
+# it doesn't include the last value of the range.
+for num in range(1, 11):
+    print(num)
+
+# Range step size is the 3rd Argument applied to the range 
+# The step size is the number of value to be skipped before displaying the next sequence
+for num in range(1, 30, 2):
+    print(num)
