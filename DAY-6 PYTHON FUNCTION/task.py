@@ -7,6 +7,11 @@ def my_func():
     print("BYE")
 
 # CALL A FUNCTION BY TYPING THE FUNCTION with braces '()'
-my_func()
+my_func()                                                                                                               
 
+
+for i in range(1, 5):
+    if i == 3:
+        print("Found 3")
+        break
 
