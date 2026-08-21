@@ -1,32 +1,48 @@
 import random
 
-# CREATING A HANGMAN GAME
+# CREATING THE HANGMAN GAME
 
 # Step one --   i. randomly choose a word from a list, 
 #               ii. ask the user to guess a letter in the word, 
-#               iii. check if the guessed letter is one of the letters in the selected_word, print right if it's and wrong if not.
+#               iii. check if the guessed letter is one of the letters in the selected_word
 
-# Step Two -- 
+# Step Two --   i. create a placeholder for the word using underscores.
+#               ii. if guessed letter is in the word, replace uderscore with a word and display the output.
+#               iii. if any false guess, maintain underscore.
 
 
 word_list = ['apple', 'tame', 'ink', 'oven', 'cheese', 'final']
 
-selected_word = word_list[random.randint(0, 5)]
-print(selected_word)
+selected_word = random.choice(word_list)
+# print(selected_word)
 
-placeholder = ''
-for letter in selected_word:
-    placeholder += "_"
+placeholder = "_" * len(selected_word)
 print(placeholder)
 
-guess = input("Guess a letter from the word: ").lower()
 
-display = ''
-for letter in selected_word:
+guessed_letter = []
+game_over = False
+
+while not game_over:
+    display = ''
+    guess = input("Guess a letter from the word: ").lower()
+
+    for letter in selected_word:
     
-    if guess == letter:
-        display += letter
-    else:
-        display += "_"
-    
-print(display)
+        if guess == letter:
+            display += letter
+            guessed_letter.append(letter)
+
+        elif letter in guessed_letter:
+            display += letter
+
+        else:
+            display += "_"
+        
+    print(display)
+
+    if '_' not in display:
+        print("You have won!!!")
+        game_over = True
+
+
