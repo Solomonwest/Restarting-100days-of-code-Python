@@ -6,7 +6,7 @@ import random
 #               ii. ask the user to guess a letter in the word, 
 #               iii. check if the guessed letter is one of the letters in the selected_word
 
-# Step Two --   i. create a placeholder for the word using underscores.
+# Step Two  --  i. create a placeholder for the word using underscores.
 #               ii. if guessed letter is in the word, replace uderscore with a word and display the output.
 #               iii. if any false guess, maintain underscore.
 
@@ -36,7 +36,7 @@ print(r'''
 
 
 placeholder = "_" * len(selected_word)
-print(placeholder)
+print(f"{placeholder}")
 
 
 guessed_letter = []
@@ -103,10 +103,10 @@ stages = [ r'''
     =============
 '''
 ]
-
+print("")
 while not game_over:
     display = ''
-    guess = input("Guess a letter from the word: ").lower()
+    guess = input("Guess a letter for the word above : ").lower()
 
     if guess in guessed_letter:
         print(f'You already guessed letter {guess}')
@@ -136,7 +136,7 @@ while not game_over:
 
 #           Game over condition
     if '_' not in display:
-        print("You have won!!!")
+        print(f"Congrats You won!! \nThe word is {selected_word}.")
         game_over = True
 
     elif life == 0:
