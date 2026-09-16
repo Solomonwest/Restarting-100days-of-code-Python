@@ -61,8 +61,6 @@ calculate_love_score("Kanye West", "Kim Kardashian")
 
 
 
-import random
-
 def calculate_love_score(name1, name2):
     
     names = name1.lower() + name2.lower()
